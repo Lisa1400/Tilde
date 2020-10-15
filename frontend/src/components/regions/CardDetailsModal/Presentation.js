@@ -6,6 +6,7 @@ import {
   TableRow,
   TableCell,
   Typography,
+  TextField,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -74,6 +75,15 @@ const CardBasicDetails = ({ card }) => {
             <TableRow>
               <TableCell>Due Time</TableCell>
               <TableCell>{card.dueTime}</TableCell>
+              <TableCell>
+                <TextField
+                  id="datetime-local"
+                  type="datetime-local"
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                />
+              </TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Start Time</TableCell>
